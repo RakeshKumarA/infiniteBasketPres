@@ -7,7 +7,17 @@ import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import logo from '../../assets/InsureLeaguehd-rmbg.png';
-import { IconButton, Typography } from '@material-ui/core';
+import { Box, IconButton, Typography } from '@material-ui/core';
+import { useHistory } from 'react-router-dom';
+import { Link } from 'react-scroll';
+import MenuIcon from '@material-ui/icons/Menu';
+import clsx from 'clsx';
+
+import Drawer from '@material-ui/core/Drawer';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemText from '@material-ui/core/ListItemText';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
 
 const useStyles = makeStyles({
   root: {
@@ -24,8 +34,15 @@ const useStyles = makeStyles({
   logoStyle: {
     width: '2.5rem',
   },
+  drawerLogoStyle: {
+    width: '2.5rem',
+    paddingTop: '2.5rem',
+  },
   buttonTextStyle: {
     padding: '0 .5rem',
+  },
+  list: {
+    width: 200,
   },
 });
 
@@ -45,7 +62,9 @@ function ElevationScroll(props) {
 
 const Header = (props) => {
   const classes = useStyles();
+  const history = useHistory();
   const [variant, setVariant] = useState('outlined');
+  const [drawerState, setDrawerState] = React.useState(false);
 
   const handlehover = () => {
     setVariant('contained');
@@ -53,70 +72,154 @@ const Header = (props) => {
   const handlehoverLeave = () => {
     setVariant('outlined');
   };
+
+  const handleLogoClick = () => {
+    history.push('/');
+  };
+
+  const aboutClickHandler = () => {
+    history.push('/about');
+  };
+
+  //Responsive zone
+
+  const toggleDrawer = (open) => (event) => {
+    if (
+      event.type === 'keydown' &&
+      (event.key === 'Tab' || event.key === 'Shift')
+    ) {
+      return;
+    }
+    setDrawerState(open);
+  };
+
   return (
     <React.Fragment>
       <CssBaseline />
       <ElevationScroll {...props}>
         <AppBar className={classes.root} color="inherit">
           <Toolbar className={classes.toolbarStyle}>
-            <Grid container justify="center">
-              <Grid
+            <Box component={Grid} container justify="center">
+              <Box
+                component={Grid}
                 item
-                md={8}
-                sm={9}
+                display={{ xs: 'none', sm: 'flex' }}
+                md={7}
+                sm={10}
                 container
                 spacing={2}
                 alignItems="center"
               >
-                <Grid item>
-                  <IconButton>
-                    <img src={logo} alt="logo" className={classes.logoStyle} />
-                  </IconButton>
-                </Grid>
-                <Grid item>
-                  <Button variant="text" color="default">
-                    <Typography variant="subtitle2" color="initial">
-                      Home
-                    </Typography>
-                  </Button>
-                </Grid>
-                <Grid item>
-                  <Button variant="text" color="default">
-                    <Typography variant="subtitle2" color="initial">
-                      Services
-                    </Typography>
-                  </Button>
-                </Grid>
-                <Grid item>
-                  <Button variant="text" color="default">
-                    <Typography variant="subtitle2" color="initial">
-                      Review
-                    </Typography>
-                  </Button>
-                </Grid>
-                <Grid item>
-                  <Button variant="text" color="default">
-                    <Typography variant="subtitle2" color="initial">
-                      Team
-                    </Typography>
-                  </Button>
-                </Grid>
-                <Grid item>
-                  <Button variant="text" color="default">
-                    <Typography variant="subtitle2" color="initial">
-                      Contact
-                    </Typography>
-                  </Button>
-                </Grid>
-              </Grid>
-              <Grid
+                <Box component={Grid} item>
+                  <Link
+                    activeClass="active"
+                    to="section1"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                  >
+                    <IconButton onClick={handleLogoClick}>
+                      <img
+                        src={logo}
+                        alt="logo"
+                        className={classes.logoStyle}
+                      />
+                    </IconButton>
+                  </Link>
+                </Box>
+                <Box component={Grid} item>
+                  <Link
+                    activeClass="active"
+                    to="section1"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                  >
+                    <Button variant="text" color="default">
+                      <Typography variant="subtitle2" color="initial">
+                        Home
+                      </Typography>
+                    </Button>
+                  </Link>
+                </Box>
+                <Box component={Grid} item>
+                  <Link
+                    activeClass="active"
+                    to="section2"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                  >
+                    <Button variant="text" color="default">
+                      <Typography variant="subtitle2" color="initial">
+                        Services
+                      </Typography>
+                    </Button>
+                  </Link>
+                </Box>
+                <Box component={Grid} item>
+                  <Link
+                    activeClass="active"
+                    to="section3"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                  >
+                    <Button variant="text" color="default">
+                      <Typography variant="subtitle2" color="initial">
+                        Review
+                      </Typography>
+                    </Button>
+                  </Link>
+                </Box>
+                <Box component={Grid} item>
+                  <Link
+                    activeClass="active"
+                    to="section4"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                  >
+                    <Button variant="text" color="default">
+                      <Typography variant="subtitle2" color="initial">
+                        Team
+                      </Typography>
+                    </Button>
+                  </Link>
+                </Box>
+                <Box component={Grid} item>
+                  <Link
+                    activeClass="active"
+                    to="section5"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                  >
+                    <Button variant="text" color="default">
+                      <Typography variant="subtitle2" color="initial">
+                        Contact
+                      </Typography>
+                    </Button>
+                  </Link>
+                </Box>
+              </Box>
+              <Box
+                component={Grid}
+                display={{ xs: 'none', sm: 'flex' }}
                 item
-                md={1}
+                md={2}
+                sm={2}
                 container
                 alignItems="center"
                 justify="flex-end"
               >
-                <Grid item>
+                <Box component={Grid} item>
                   <Button
                     variant={variant}
                     color="primary"
@@ -127,13 +230,138 @@ const Header = (props) => {
                       variant="subtitle2"
                       color="initial"
                       className={classes.buttonTextStyle}
+                      onClick={aboutClickHandler}
                     >
                       About us
                     </Typography>
                   </Button>
-                </Grid>
-              </Grid>
-            </Grid>
+                </Box>
+              </Box>
+              <Box
+                component={Grid}
+                item
+                container
+                display={{ xs: 'flex', sm: 'none' }}
+                justify="flex-end"
+              >
+                <IconButton onClick={toggleDrawer(true)}>
+                  <MenuIcon />
+                </IconButton>
+                <Drawer
+                  anchor="right"
+                  open={drawerState}
+                  onClose={toggleDrawer(false)}
+                >
+                  <div
+                    className={clsx(classes.list)}
+                    onClick={toggleDrawer(false)}
+                    onKeyDown={toggleDrawer(false)}
+                  >
+                    <List>
+                      <ListItem button>
+                        <Link
+                          activeClass="active"
+                          to="section1"
+                          spy={true}
+                          smooth={true}
+                          offset={-70}
+                          duration={500}
+                        >
+                          <ListItemIcon>
+                            <img
+                              src={logo}
+                              alt="logo"
+                              className={classes.drawerLogoStyle}
+                            />
+                          </ListItemIcon>
+                        </Link>
+                      </ListItem>
+
+                      <Link
+                        activeClass="active"
+                        to="section1"
+                        spy={true}
+                        smooth={true}
+                        offset={-70}
+                        duration={500}
+                      >
+                        <ListItem button>
+                          <ListItemText>
+                            <Typography variant="h6" color="initial">
+                              Home
+                            </Typography>
+                          </ListItemText>
+                        </ListItem>
+                      </Link>
+                      <Link
+                        activeClass="active"
+                        to="section2"
+                        spy={true}
+                        smooth={true}
+                        offset={-70}
+                        duration={500}
+                      >
+                        <ListItem button>
+                          <ListItemText>
+                            <Typography variant="h6" color="initial">
+                              Services
+                            </Typography>
+                          </ListItemText>
+                        </ListItem>
+                      </Link>
+                      <Link
+                        activeClass="active"
+                        to="section3"
+                        spy={true}
+                        smooth={true}
+                        offset={-70}
+                        duration={500}
+                      >
+                        <ListItem button>
+                          <ListItemText>
+                            <Typography variant="h6" color="initial">
+                              Review
+                            </Typography>
+                          </ListItemText>
+                        </ListItem>
+                      </Link>
+                      <Link
+                        activeClass="active"
+                        to="section4"
+                        spy={true}
+                        smooth={true}
+                        offset={-70}
+                        duration={500}
+                      >
+                        <ListItem button>
+                          <ListItemText>
+                            <Typography variant="h6" color="initial">
+                              Team
+                            </Typography>
+                          </ListItemText>
+                        </ListItem>
+                      </Link>
+                      <Link
+                        activeClass="active"
+                        to="section5"
+                        spy={true}
+                        smooth={true}
+                        offset={-70}
+                        duration={500}
+                      >
+                        <ListItem button>
+                          <ListItemText>
+                            <Typography variant="h6" color="initial">
+                              Contact
+                            </Typography>
+                          </ListItemText>
+                        </ListItem>
+                      </Link>
+                    </List>
+                  </div>
+                </Drawer>
+              </Box>
+            </Box>
           </Toolbar>
         </AppBar>
       </ElevationScroll>

@@ -14,12 +14,13 @@ import Swiper from 'react-id-swiper';
 import 'swiper/swiper-bundle.css';
 import SwiperCore, { Navigation, Pagination, Autoplay } from 'swiper';
 import Box from '@material-ui/core/Box';
+import { useHistory } from 'react-router-dom';
 
 SwiperCore.use([Navigation, Pagination, Autoplay]);
 
 const useStyles = makeStyles({
   root: {
-    height: 750,
+    height: 600,
   },
   titleStyle: {
     fontWeight: 700,
@@ -52,6 +53,7 @@ const useStyles = makeStyles({
 
 const Services = () => {
   const classes = useStyles();
+  const history = useHistory();
   const [variant1, setVariant1] = useState('outlined');
   const [variant2, setVariant2] = useState('outlined');
   const [variant3, setVariant3] = useState('outlined');
@@ -198,6 +200,29 @@ const Services = () => {
     },
   ];
 
+  const handleServiceClick = (id) => {
+    switch (id) {
+      case 1:
+        history.push('/keyman');
+        break;
+      case 2:
+        history.push('/termplan');
+        break;
+      case 3:
+        history.push('/nriinsure');
+        break;
+      case 4:
+        history.push('/retire');
+        break;
+      case 5:
+        history.push('/healthinsure');
+        break;
+
+      default:
+        break;
+    }
+  };
+
   return (
     <Grid
       container
@@ -255,7 +280,11 @@ const Services = () => {
                       className={classes.learnMoreStyle}
                     >
                       <Box>
-                        <Button variant="text" color="default">
+                        <Button
+                          variant="text"
+                          color="default"
+                          onClick={() => handleServiceClick(service.id)}
+                        >
                           Learn More
                         </Button>
                       </Box>

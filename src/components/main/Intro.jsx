@@ -3,18 +3,14 @@ import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
+import { useHistory } from 'react-router-dom';
 
 const useStyles = makeStyles({
   root: {
     height: 600,
     backgroundImage: 'linear-gradient(45deg, #4CAF50,#81C784 100%)',
     color: '#fff',
-  },
-  child: {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
+    padding: '2rem',
   },
   buttonTextStyle: {
     padding: '0 .5rem',
@@ -26,12 +22,17 @@ const useStyles = makeStyles({
 
 const Intro = () => {
   const classes = useStyles();
+  const history = useHistory();
+
+  const handleAboutClick = () => {
+    history.push('/about');
+  };
   return (
     <Grid container className={classes.root} justify="center">
       <Grid
         item
         container
-        sm={5}
+        sm={6}
         direction="column"
         justify="center"
         alignItems="center"
@@ -62,6 +63,7 @@ const Intro = () => {
               variant="subtitle2"
               color="initial"
               className={classes.buttonTextStyle}
+              onClick={handleAboutClick}
             >
               LEARN MORE
             </Typography>

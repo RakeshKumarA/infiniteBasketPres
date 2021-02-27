@@ -18,12 +18,22 @@ const Main = () => {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <Intro />
-      <Services />
-      <Review />
-      <Team />
+      <div id="section1">
+        <Intro />
+      </div>
+      {/* <div id="section2">
+        <Services />
+      </div>*/}
+      <div id="section3">
+        <Review />
+      </div>
+      <div id="section4">
+        <Team />
+      </div>
       <CallToAction />
-      <Contact />
+      <div id="section5">
+        <Contact />
+      </div>
     </div>
   );
 };
