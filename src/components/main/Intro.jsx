@@ -1,22 +1,22 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
-import Grid from '@material-ui/core/Grid';
-import Button from '@material-ui/core/Button';
-import { useHistory } from 'react-router-dom';
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import Typography from "@material-ui/core/Typography";
+import Grid from "@material-ui/core/Grid";
+import Button from "@material-ui/core/Button";
+import { useHistory } from "react-router-dom";
 
 const useStyles = makeStyles({
   root: {
-    height: 600,
-    backgroundImage: 'linear-gradient(45deg, #4CAF50,#81C784 100%)',
-    color: '#fff',
-    padding: '2rem',
+    height: 500,
+    backgroundImage: "linear-gradient(45deg, #4CAF50,#81C784 100%)",
+    color: "#fff",
+    padding: "2rem",
   },
   buttonTextStyle: {
-    padding: '0 .5rem',
+    padding: "0 .5rem",
   },
   marginTop2rem: {
-    marginTop: '2rem',
+    marginTop: "2rem",
   },
 });
 
@@ -25,14 +25,14 @@ const Intro = () => {
   const history = useHistory();
 
   const handleAboutClick = () => {
-    history.push('/about');
+    history.push("/about");
   };
   return (
     <Grid container className={classes.root} justify="center">
       <Grid
         item
         container
-        sm={6}
+        sm={5}
         direction="column"
         justify="center"
         alignItems="center"

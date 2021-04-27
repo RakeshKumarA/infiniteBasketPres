@@ -7,38 +7,38 @@ import {
   Button,
   IconButton,
   Box,
-} from '@material-ui/core';
-import React from 'react';
+} from "@material-ui/core";
+import React from "react";
 
-import FacebookIcon from '@material-ui/icons/Facebook';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import TwitterIcon from '@material-ui/icons/Twitter';
-import MailIcon from '@material-ui/icons/Mail';
-import LocationOnIcon from '@material-ui/icons/LocationOn';
+import FacebookIcon from "@material-ui/icons/Facebook";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import InstagramIcon from "@material-ui/icons/Instagram";
+import MailIcon from "@material-ui/icons/Mail";
+import LocationOnIcon from "@material-ui/icons/LocationOn";
 
 const useStyles = makeStyles({
   root: {
-    height: 275,
-    background: '#212121',
+    height: "55vh",
+    background: "#212121",
   },
   cardStyle: {
-    height: '100%',
-    background: '#212121',
-    color: '#fff',
+    height: "100%",
+    background: "#212121",
+    color: "#fff",
   },
   cardContainer: {
-    height: '100%',
+    height: "100%",
   },
   titleStyle: {
     fontSize: 20,
     fontWeight: 700,
   },
   cardInsideContainer: {
-    padding: '2rem',
+    padding: "2rem",
   },
   solidLine: {
-    borderTop: '3px solid #4CAF50',
-    width: '15%',
+    borderTop: "3px solid #4CAF50",
+    width: "15%",
   },
   contEmailTitle: {
     fontSize: 16,
@@ -64,7 +64,7 @@ const Footer = () => {
         item
         container
         lg={10}
-        display={{ xs: 'none', lg: 'flex', xl: 'flex' }}
+        display={{ xs: "none", lg: "flex", xl: "flex" }}
         className={classes.cardContainer}
       >
         <Grid item sm={6}>
@@ -92,21 +92,66 @@ const Footer = () => {
                   presence and absence.
                 </Typography>
               </Grid>
+
               <Grid item>
-                <Button variant="contained" color="primary">
+                <Button
+                  variant="contained"
+                  color="primary"
+                  href="tel:+919900600661"
+                >
                   Contact us
                 </Button>
               </Grid>
               <Grid item container>
-                <IconButton size="small">
+                <IconButton
+                  size="small"
+                  size="small"
+                  href="https://www.facebook.com/InsureLeague"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <FacebookIcon color="primary" fontSize="large" />
                 </IconButton>
-                <IconButton size="small">
+                <IconButton
+                  size="small"
+                  size="small"
+                  href="https://www.linkedin.com/company/insureleague"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <LinkedInIcon color="primary" fontSize="large" />
                 </IconButton>
-                <IconButton size="small">
-                  <TwitterIcon color="primary" fontSize="large" />
+                <IconButton
+                  size="small"
+                  size="small"
+                  href="https://instagram.com/insureleague?igshid=150uubg8s3y3i"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <InstagramIcon color="primary" fontSize="large" />
                 </IconButton>
+              </Grid>
+              <Grid item>
+                <Typography
+                  variant="h6"
+                  color="initial"
+                  style={{ color: "red" }}
+                >
+                  Disclaimer
+                </Typography>
+                <Typography variant="caption" color="initial">
+                  <Box fontStyle="italic" m={1}>
+                    BEWARE OF SPURIOUS PHONE CALLS AND FICTIOUS/FRADULENT OFFERS
+                  </Box>
+                </Typography>
+                <Typography variant="caption" color="initial">
+                  <Box fontStyle="italic" m={1}>
+                    IRDAI is not involved in activities like selling insurance
+                    policies, announcing bonus or investment of premiums. Public
+                    receiving such phone calls are requested to lodge a police
+                    complaint.
+                  </Box>
+                </Typography>
               </Grid>
             </Grid>
           </Card>
@@ -131,7 +176,9 @@ const Footer = () => {
               </Grid>
               <Grid item container alignItems="center" spacing={2}>
                 <Grid item lg={1}>
-                  <MailIcon color="primary" />
+                  <a href="mailto:info@insureleague.com">
+                    <MailIcon color="primary" />
+                  </a>
                 </Grid>
                 <Grid item container lg={11} direction="column">
                   <Grid item>
@@ -149,7 +196,7 @@ const Footer = () => {
                       color="initial"
                       className={classes.contEmailContent}
                     >
-                      infinitebasketimf@gmail.com
+                      info@insureleague.com
                     </Typography>
                   </Grid>
                 </Grid>
@@ -200,7 +247,7 @@ const Footer = () => {
         item
         container
         md={12}
-        display={{ xs: 'flex', lg: 'none', xl: 'none' }}
+        display={{ xs: "flex", lg: "none", xl: "none" }}
         // className={classes.cardContainer}
         direction="column"
       >
@@ -230,20 +277,61 @@ const Footer = () => {
                 </Typography>
               </Grid>
               <Grid item>
-                <Button variant="contained" color="primary">
-                  Contact us
+                <Button
+                  variant="contained"
+                  color="primary"
+                  href="tel:+919900600661"
+                >
+                  Contact Us
                 </Button>
               </Grid>
               <Grid item container>
-                <IconButton size="small">
+                <IconButton
+                  size="small"
+                  href="https://www.facebook.com/InsureLeague"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <FacebookIcon color="primary" fontSize="large" />
                 </IconButton>
-                <IconButton size="small">
+                <IconButton
+                  size="small"
+                  href="https://www.linkedin.com/company/insureleague"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <LinkedInIcon color="primary" fontSize="large" />
                 </IconButton>
-                <IconButton size="small">
-                  <TwitterIcon color="primary" fontSize="large" />
+                <IconButton
+                  size="small"
+                  href="https://instagram.com/insureleague?igshid=150uubg8s3y3i"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <InstagramIcon color="primary" fontSize="large" />
                 </IconButton>
+              </Grid>
+              <Grid item>
+                <Typography
+                  variant="h6"
+                  color="initial"
+                  style={{ color: "red" }}
+                >
+                  Disclaimer
+                </Typography>
+                <Typography variant="caption" color="initial">
+                  <Box fontStyle="italic">
+                    BEWARE OF SPURIOUS PHONE CALLS AND FICTIOUS/FRADULENT OFFERS
+                  </Box>
+                </Typography>
+                <Typography variant="caption" color="initial">
+                  <Box fontStyle="italic">
+                    IRDAI is not involved in activities like selling insurance
+                    policies, announcing bonus or investment of premiums. Public
+                    receiving such phone calls are requested to lodge a police
+                    complaint.
+                  </Box>
+                </Typography>
               </Grid>
             </Grid>
           </Card>
@@ -268,7 +356,9 @@ const Footer = () => {
               </Grid>
               <Grid item container alignItems="center" spacing={2}>
                 <Grid item lg={1}>
-                  <MailIcon color="primary" />
+                  <a href="mailto:info@insureleague.com">
+                    <MailIcon color="primary" />
+                  </a>
                 </Grid>
                 <Grid item container lg={11} direction="column">
                   <Grid item>
@@ -286,7 +376,7 @@ const Footer = () => {
                       color="initial"
                       className={classes.contEmailContent}
                     >
-                      infinitebasketimf@gmail.com
+                      info@insureleague.com
                     </Typography>
                   </Grid>
                 </Grid>

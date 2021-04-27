@@ -72,7 +72,7 @@ function ElevationScroll(props) {
   });
 }
 
-const Header = (props) => {
+const Header2 = (props) => {
   const classes = useStyles();
   const history = useHistory();
   const [variant, setVariant] = useState("outlined");
@@ -87,10 +87,6 @@ const Header = (props) => {
 
   const handleLogoClick = () => {
     history.push("/");
-  };
-
-  const aboutClickHandler = () => {
-    history.push("/about");
   };
 
   //Responsive zone
@@ -146,82 +142,17 @@ const Header = (props) => {
                   </Typography>
                 </Box>
                 <Box component={Grid} item>
-                  <Link
-                    activeClass="active"
-                    to="section1"
-                    spy={true}
-                    smooth={true}
-                    offset={-70}
-                    duration={500}
-                  >
-                    <Button variant="text" color="default">
-                      <Typography
-                        variant="subtitle2"
-                        color="initial"
-                        className={classes.logoTextStyle}
-                      >
-                        InsureLeague
-                      </Typography>
-                    </Button>
-                  </Link>
-                </Box>
-                <Box component={Grid} item>
-                  <Link
-                    activeClass="active"
-                    to="section2"
-                    spy={true}
-                    smooth={true}
-                    offset={-70}
-                    duration={500}
-                  >
-                    <Button variant="text" color="default">
-                      <Typography variant="subtitle2" color="initial">
-                        Company
-                      </Typography>
-                    </Button>
-                  </Link>
-                </Box>
-                <Box component={Grid} item>
-                  <Link
-                    activeClass="active"
-                    to="section3"
-                    spy={true}
-                    smooth={true}
-                    offset={-70}
-                    duration={500}
-                  >
-                    <Button variant="text" color="default">
-                      <Typography variant="subtitle2" color="initial">
-                        Team
-                      </Typography>
-                    </Button>
-                  </Link>
-                </Box>
-              </Box>
-              <Box
-                component={Grid}
-                display={{ xs: "none", sm: "flex" }}
-                item
-                md={2}
-                sm={2}
-                container
-                alignItems="center"
-                justify="flex-end"
-              >
-                <Box component={Grid} item>
                   <Button
-                    variant={variant}
-                    color="primary"
-                    onMouseOver={handlehover}
-                    onMouseLeave={handlehoverLeave}
+                    variant="text"
+                    color="default"
+                    onClick={handleLogoClick}
                   >
                     <Typography
                       variant="subtitle2"
                       color="initial"
-                      className={classes.buttonTextStyle}
-                      onClick={aboutClickHandler}
+                      className={classes.logoTextStyle}
                     >
-                      About us
+                      InsureLeague
                     </Typography>
                   </Button>
                 </Box>
@@ -255,81 +186,19 @@ const Header = (props) => {
                     onKeyDown={toggleDrawer(false)}
                   >
                     <List>
-                      <ListItem button>
-                        <Link
-                          activeClass="active"
-                          to="section1"
-                          spy={true}
-                          smooth={true}
-                          offset={-70}
-                          duration={500}
-                        >
-                          <ListItemIcon>
-                            <img
-                              src={logo}
-                              alt="logo"
-                              className={classes.drawerLogoStyle}
-                            />
-                          </ListItemIcon>
-                        </Link>
+                      <ListItem button onClick={handleLogoClick}>
+                        <ListItemIcon>
+                          <img
+                            src={logo}
+                            alt="logo"
+                            className={classes.drawerLogoStyle}
+                          />
+                        </ListItemIcon>
                       </ListItem>
-
-                      <Link
-                        activeClass="active"
-                        to="section1"
-                        spy={true}
-                        smooth={true}
-                        offset={-70}
-                        duration={500}
-                      >
-                        <ListItem button>
-                          <ListItemText>
-                            <Typography
-                              variant="h6"
-                              color="initial"
-                              className={classes.logoTextStyle}
-                            >
-                              InsureLeague
-                            </Typography>
-                          </ListItemText>
-                        </ListItem>
-                      </Link>
-                      <Link
-                        activeClass="active"
-                        to="section2"
-                        spy={true}
-                        smooth={true}
-                        offset={-70}
-                        duration={500}
-                      >
-                        <ListItem button>
-                          <ListItemText>
-                            <Typography variant="h6" color="initial">
-                              Company
-                            </Typography>
-                          </ListItemText>
-                        </ListItem>
-                      </Link>
-                      <Link
-                        activeClass="active"
-                        to="section3"
-                        spy={true}
-                        smooth={true}
-                        offset={-70}
-                        duration={500}
-                      >
-                        <ListItem button>
-                          <ListItemText>
-                            <Typography variant="h6" color="initial">
-                              Team
-                            </Typography>
-                          </ListItemText>
-                        </ListItem>
-                      </Link>
-                      <ListItem button onClick={aboutClickHandler}>
+                      <ListItem button onClick={handleLogoClick}>
                         <ListItemText>
                           <Typography variant="h6" color="initial">
-                            About us
+                            Home
                           </Typography>
                         </ListItemText>
                       </ListItem>
@@ -345,4 +214,4 @@ const Header = (props) => {
   );
 };
 
-export default Header;
+export default Header2;
