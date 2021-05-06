@@ -1,7 +1,14 @@
-import React from 'react';
+import React from "react";
+import Header3 from "../header/Header3";
+import Introhni from "../main/Introhni";
 
 const Retire = () => {
-  return <div>Retire</div>;
+  return (
+    <>
+      <Header3 />
+      <Introhni />
+    </>
+  );
 };
 
 export default Retire;

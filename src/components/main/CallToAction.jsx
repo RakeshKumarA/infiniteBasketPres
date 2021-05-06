@@ -3,8 +3,10 @@ import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import GreenBG from "../../assets/greenbg.jpg";
 import hdfcergo from "../../assets/hdfc-ergo.png";
-
+import star from "../../assets/star.jpeg";
 import hdfclife from "../../assets/HDFC_Life_Logo.png";
+import maxlife from "../../assets/max-life-1.jpg";
+import maxbupa from "../../assets/maxBupa.png";
 import Typography from "@material-ui/core/Typography";
 import { Box } from "@material-ui/core";
 
@@ -18,7 +20,7 @@ const useStyles = makeStyles({
     backgroundRepeat: "no-repeat",
   },
   rootres: {
-    height: 400,
+    height: 600,
     position: "relative",
     backgroundImage: `url(${GreenBG})`,
     backgroundPosition: "center",
@@ -77,6 +79,15 @@ const CallToAction = () => {
           <Grid item>
             <img src={hdfclife} alt="HDFCLIFE" className={classes.imgsize} />
           </Grid>
+          <Grid item>
+            <img src={maxlife} alt="MAXLIFE" className={classes.imgsize} />
+          </Grid>
+          <Grid item>
+            <img src={maxbupa} alt="MAXBUPA" className={classes.imgsize} />
+          </Grid>
+          <Grid item>
+            <img src={star} alt="STARHEALTH" className={classes.imgsize} />
+          </Grid>
         </Grid>
       </Box>
       <Box
@@ -110,6 +121,15 @@ const CallToAction = () => {
           </Grid>
           <Grid item>
             <img src={hdfclife} alt="Mastercard" className={classes.imgsize} />
+          </Grid>
+          <Grid item>
+            <img src={maxlife} alt="Mastercard" className={classes.imgsize} />
+          </Grid>
+          <Grid item>
+            <img src={maxbupa} alt="Mastercard" className={classes.imgsize} />
+          </Grid>
+          <Grid item>
+            <img src={star} alt="STARHEALTH" className={classes.imgsize} />
           </Grid>
         </Grid>
       </Box>

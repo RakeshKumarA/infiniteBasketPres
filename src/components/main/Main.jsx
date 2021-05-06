@@ -1,12 +1,10 @@
 import React from "react";
 import Intro from "./Intro";
 import { makeStyles } from "@material-ui/core/styles";
-import Services from "./Services";
-import Review from "./Review";
 import Team from "./Team";
 import CallToAction from "./CallToAction";
-import Contact from "./Contact";
 import Showcase from "./Showcase";
+import Footer from "../footer/Footer";
 
 const useStyles = makeStyles({
   root: {
@@ -25,11 +23,13 @@ const Main = () => {
       <div id="section2">
         <Intro />
       </div>
-
       <div id="section3">
         <Team />
       </div>
       <CallToAction />
+      <div id="section4">
+        <Footer />
+      </div>
     </div>
   );
 };

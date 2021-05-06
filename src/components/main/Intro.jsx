@@ -8,8 +8,7 @@ import { useHistory } from "react-router-dom";
 const useStyles = makeStyles({
   root: {
     height: 500,
-    backgroundImage: "linear-gradient(45deg, #4CAF50,#81C784 100%)",
-    color: "#fff",
+    backgroundImage: "linear-gradient(45deg, #FAFAFA,#F5F5F5 100%)",
     padding: "2rem",
   },
   buttonTextStyle: {
@@ -50,11 +49,11 @@ const Intro = () => {
         </Grid>
         <Grid item className={classes.marginTop2rem}>
           <Typography variant="body2" color="initial" align="center">
-            InsureLeague is a Corporate Insurance Advisory / Marketing firm with
-            approval from IRDAI. With over 30 years of industry experience, we
-            focus on giving tailor made insurance / investment/ risk mitigation
-            solutions for MSME (Micro, Small & Medium Enterprises), HNI (High
-            Networth Individuals) and NRI (Non - Resident Individuals) clients.
+            InsureLeague is a Insurance Marketing firm with approval from IRDAI.
+            With over 30 years of industry experience, we focus on giving tailor
+            made insurance / investment/ risk mitigation solutions for MSME
+            (Micro, Small & Medium Enterprises), HNI (High Networth Individuals)
+            and NRI (Non - Resident Individuals) clients.
           </Typography>
         </Grid>
         <Grid item className={classes.marginTop2rem}>

@@ -1,14 +1,14 @@
 import React from "react";
 import Header3 from "../header/Header3";
-import IntroNRI from "../main/IntroNRI";
+import BlogList from "../main/BlogList";
 
-const NRIInsure = () => {
+const Blog = () => {
   return (
     <>
       <Header3 />
-      <IntroNRI />
+      <BlogList />
     </>
   );
 };
 
-export default NRIInsure;
+export default Blog;

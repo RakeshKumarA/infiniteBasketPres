@@ -69,10 +69,11 @@ function ElevationScroll(props) {
   return React.cloneElement(children, {
     elevation: trigger ? 4 : 0,
     className: trigger ? classes.triggeredroot : classes.root,
+    color: trigger ? "inherit" : "transparent",
   });
 }
 
-const Header2 = (props) => {
+const Header3 = (props) => {
   const classes = useStyles();
   const history = useHistory();
   const [variant, setVariant] = useState("outlined");
@@ -105,7 +106,7 @@ const Header2 = (props) => {
     <React.Fragment>
       <CssBaseline />
       <ElevationScroll {...props}>
-        <AppBar className={classes.root} color="inherit">
+        <AppBar className={classes.root} color="transparent">
           <Toolbar className={classes.toolbarStyle}>
             <Box component={Grid} container justify="center">
               <Box
@@ -212,4 +213,4 @@ const Header2 = (props) => {
   );
 };
 
-export default Header2;
+export default Header3;

@@ -1,22 +1,22 @@
-import { createMuiTheme } from '@material-ui/core/styles';
+import { createMuiTheme } from "@material-ui/core/styles";
 
 const theme = createMuiTheme({
   palette: {
     primary: {
-      main: '#4CAF50',
-      contrastText: '#fff',
+      main: "#4CAF50",
+      contrastText: "#fff",
     },
   },
   overrides: {
     MuiButton: {
       root: {
-        textTransform: 'none',
+        textTransform: "none",
       },
       outlined: {
-        borderRadius: '1rem',
+        borderRadius: "1rem",
       },
       contained: {
-        borderRadius: '1rem',
+        borderRadius: "1rem",
       },
     },
     MuiTypography: {
@@ -24,7 +24,7 @@ const theme = createMuiTheme({
         fontWeight: 700,
       },
       h4: {
-        fontSize: '1.75rem',
+        fontSize: "1.75rem",
       },
       h5: {
         fontWeight: 300,

@@ -18,16 +18,20 @@ import LocationOnIcon from "@material-ui/icons/LocationOn";
 
 const useStyles = makeStyles({
   root: {
-    height: "55vh",
     background: "#212121",
   },
   cardStyle: {
-    height: "100%",
+    height: "55vh",
+    background: "#212121",
+    color: "#fff",
+  },
+  cardStyleres: {
+    height: "75vh",
     background: "#212121",
     color: "#fff",
   },
   cardContainer: {
-    height: "100%",
+    height: "55vh",
   },
   titleStyle: {
     fontSize: 20,
@@ -176,7 +180,11 @@ const Footer = () => {
               </Grid>
               <Grid item container alignItems="center" spacing={2}>
                 <Grid item lg={1}>
-                  <a href="mailto:info@insureleague.com">
+                  <a
+                    href="mailto:info@insureleague.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <MailIcon color="primary" />
                   </a>
                 </Grid>
@@ -203,7 +211,13 @@ const Footer = () => {
               </Grid>
               <Grid item container alignItems="center" spacing={2}>
                 <Grid item lg={1}>
+                  {/* <a
+                    href="https://goo.gl/maps/rkkakpSuUThum3ve6"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  > */}
                   <LocationOnIcon color="primary" />
+                  {/* </a> */}
                 </Grid>
                 <Grid item container lg={11} direction="column">
                   <Grid item>
@@ -252,7 +266,7 @@ const Footer = () => {
         direction="column"
       >
         <Grid item>
-          <Card className={classes.cardStyle} elevation={4}>
+          <Card className={classes.cardStyleres} elevation={4}>
             <Grid
               container
               direction="column"
@@ -337,7 +351,7 @@ const Footer = () => {
           </Card>
         </Grid>
         <Grid item>
-          <Card className={classes.cardStyle} elevation={4}>
+          <Card className={classes.cardStyleres} elevation={4}>
             <Grid
               container
               direction="column"

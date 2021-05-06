@@ -1,11 +1,14 @@
-import React from 'react'
+import React from "react";
+import Header3 from "../header/Header3";
+import IntroTerm from "../main/IntroTerm";
 
 const TermPlan = () => {
-	return (
-		<div>
-			Term Plan
-		</div>
-	)
-}
+  return (
+    <>
+      <Header3 />
+      <IntroTerm />
+    </>
+  );
+};
 
-export default TermPlan
+export default TermPlan;

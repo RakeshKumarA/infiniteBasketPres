@@ -46,7 +46,7 @@ const useStyles = makeStyles({
   },
   logoTextStyle: {
     fontFamily: "Krona One, sans-serif",
-    color: "green",
+    color: "#4CAF50",
   },
   logoTextStylemob: {
     fontFamily: "Krona One, sans-serif",
@@ -54,7 +54,7 @@ const useStyles = makeStyles({
     justifyContent: "center",
     flexGrow: 1,
     paddingLeft: "3rem",
-    color: "green",
+    color: "#4CAF50",
   },
 });
 
@@ -103,6 +103,10 @@ const Header = (props) => {
       return;
     }
     setDrawerState(open);
+  };
+
+  const blogClickHandler = () => {
+    history.push("/blog");
   };
 
   return (
@@ -197,6 +201,32 @@ const Header = (props) => {
                     </Button>
                   </Link>
                 </Box>
+                <Box component={Grid} item>
+                  <Link
+                    activeClass="active"
+                    to="section4"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                  >
+                    <Button variant="text" color="default">
+                      <Typography variant="subtitle2" color="initial">
+                        Contact
+                      </Typography>
+                    </Button>
+                  </Link>
+                </Box>
+                <Button variant="text" color="primary">
+                  <Typography
+                    variant="subtitle2"
+                    color="initial"
+                    className={classes.buttonTextStyle}
+                    onClick={blogClickHandler}
+                  >
+                    Blog
+                  </Typography>
+                </Button>
               </Box>
               <Box
                 component={Grid}
@@ -255,23 +285,12 @@ const Header = (props) => {
                     onKeyDown={toggleDrawer(false)}
                   >
                     <List>
-                      <ListItem button>
-                        <Link
-                          activeClass="active"
-                          to="section1"
-                          spy={true}
-                          smooth={true}
-                          offset={-70}
-                          duration={500}
-                        >
-                          <ListItemIcon>
-                            <img
-                              src={logo}
-                              alt="logo"
-                              className={classes.drawerLogoStyle}
-                            />
-                          </ListItemIcon>
-                        </Link>
+                      <ListItem>
+                        <img
+                          src={logo}
+                          alt="logo"
+                          className={classes.drawerLogoStyle}
+                        />
                       </ListItem>
 
                       <Link
@@ -326,6 +345,29 @@ const Header = (props) => {
                           </ListItemText>
                         </ListItem>
                       </Link>
+                      <Link
+                        activeClass="active"
+                        to="section4"
+                        spy={true}
+                        smooth={true}
+                        offset={-70}
+                        duration={500}
+                      >
+                        <ListItem button>
+                          <ListItemText>
+                            <Typography variant="h6" color="initial">
+                              Contact
+                            </Typography>
+                          </ListItemText>
+                        </ListItem>
+                      </Link>
+                      <ListItem button onClick={blogClickHandler}>
+                        <ListItemText>
+                          <Typography variant="h6" color="initial">
+                            Blog
+                          </Typography>
+                        </ListItemText>
+                      </ListItem>
                       <ListItem button onClick={aboutClickHandler}>
                         <ListItemText>
                           <Typography variant="h6" color="initial">

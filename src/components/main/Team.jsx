@@ -11,18 +11,18 @@ import Spacer from "react-add-space";
 
 const useStyles = makeStyles({
   root: {
-    height: "100vh",
+    height: "120vh",
   },
   resprootmdsm: {
-    height: "80vh",
+    height: "100vh",
     padding: "2rem",
   },
   resprootxs: {
-    height: "140vh",
+    height: "180vh",
     padding: "2rem",
   },
   titleStyle: {
-    fontSize: 48,
+    fontSize: 36,
     fontWeight: 700,
   },
   resumefontwt: {
@@ -49,7 +49,7 @@ const Team = () => {
           <Grid item container direction="column" justify="center" spacing={4}>
             <Grid item>
               <Typography
-                variant="h1"
+                variant="h2"
                 color="initial"
                 className={classes.titleStyle}
               >
@@ -59,8 +59,12 @@ const Team = () => {
             <Grid item container spacing={1}>
               <Grid item container alignItems="center">
                 <Grid item>
-                  <Typography variant="h2" color="initial">
-                    Jaisimha NS
+                  <Typography
+                    variant="h4"
+                    color="initial"
+                    style={{ fontsize: "1.5rem", fontWeight: "600" }}
+                  >
+                    Jaisimha N S
                   </Typography>
                 </Grid>
                 <Grid item>
@@ -90,7 +94,11 @@ const Team = () => {
             <Grid item container spacing={1}>
               <Grid item container alignItems="center">
                 <Grid item>
-                  <Typography variant="h2" color="initial">
+                  <Typography
+                    variant="h4"
+                    color="initial"
+                    style={{ fontsize: "1.5rem", fontWeight: "600" }}
+                  >
                     Indu Ramanujam
                   </Typography>
                 </Grid>
@@ -115,7 +123,11 @@ const Team = () => {
             <Grid item container spacing={1}>
               <Grid item container alignItems="center">
                 <Grid item>
-                  <Typography variant="h2" color="initial">
+                  <Typography
+                    variant="h4"
+                    color="initial"
+                    style={{ fontsize: "1.5rem", fontWeight: "600" }}
+                  >
                     Arun Kumar
                   </Typography>
                 </Grid>

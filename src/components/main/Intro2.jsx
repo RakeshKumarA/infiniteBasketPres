@@ -1,6 +1,5 @@
-import { Grid, Typography } from "@material-ui/core";
+import { Box, Card, Grid, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import { FullscreenExitTwoTone } from "@material-ui/icons";
 import React from "react";
 
 const useStyles = makeStyles({
@@ -15,6 +14,25 @@ const useStyles = makeStyles({
   headingStyle: {
     fontSize: "2rem",
     fontWeight: 500,
+  },
+  cardStyleLarge: {
+    height: "35vh",
+  },
+  cardStyleMedium: {
+    height: "25vh",
+  },
+  cardStyleSmall: {
+    height: "48vh",
+  },
+  cardTitleStyle: {
+    padding: "1rem 0",
+    backgroundColor: "#4CAF50",
+  },
+  cardContentStyle: {
+    padding: "1rem 2rem",
+  },
+  cardContainer: {
+    paddingBottom: "2rem",
   },
 });
 
@@ -44,7 +62,7 @@ const Intro2 = () => {
             freedom to follow your dreams.
           </p>
         </Grid>
-        <Grid item>
+        <Grid item className={classes.cardContainer}>
           <p>
             We are a group of professionals, empowering and educating people at
             large, on the requirement for sufficient insurance cover. We provide
@@ -54,6 +72,282 @@ const Intro2 = () => {
             We also provide assistance for other financial requirements.
           </p>
         </Grid>
+        <Box
+          component={Grid}
+          item
+          container
+          display={{ xs: "none", lg: "flex", xl: "flex" }}
+          justify="center"
+          spacing={2}
+        >
+          <Grid item xs={10} md={6} lg={4}>
+            <Card className={classes.cardStyleLarge}>
+              <Grid container direction="column">
+                <Grid item className={classes.cardTitleStyle}>
+                  <Typography
+                    variant="h6"
+                    color="initial"
+                    align="center"
+                    style={{ fontWeight: "600" }}
+                  >
+                    Our Mission
+                  </Typography>
+                </Grid>
+                <Grid item className={classes.cardContentStyle}>
+                  <Typography
+                    variant="subtitle2"
+                    color="initial"
+                    align="center"
+                  >
+                    InsureLeague is a brand committed to making your long term
+                    goals for your family and business “a reality” during your
+                    presence and absence. We strive to provide your family the
+                    safety net of financial security, and provide you the
+                    freedom to follow your dreams.
+                  </Typography>
+                </Grid>
+              </Grid>
+            </Card>
+          </Grid>
+          <Grid item xs={10} md={6} lg={4}>
+            <Card className={classes.cardStyleLarge}>
+              <Grid container direction="column">
+                <Grid item className={classes.cardTitleStyle}>
+                  <Typography
+                    variant="h6"
+                    color="initial"
+                    align="center"
+                    style={{ fontWeight: "600" }}
+                  >
+                    Our Vision
+                  </Typography>
+                </Grid>
+                <Grid item className={classes.cardContentStyle}>
+                  <Typography
+                    variant="subtitle2"
+                    color="initial"
+                    align="center"
+                  >
+                    We empower and educate business organization and
+                    individuals, on the requirement for sufficient insurance
+                    cover to mitigate risk in both business and personal life.
+                  </Typography>
+                </Grid>
+              </Grid>
+            </Card>
+          </Grid>
+          <Grid item xs={10} md={6} lg={4}>
+            <Card className={classes.cardStyleLarge}>
+              <Grid container direction="column">
+                <Grid item className={classes.cardTitleStyle}>
+                  <Typography
+                    variant="h6"
+                    color="initial"
+                    align="center"
+                    style={{ fontWeight: "600" }}
+                  >
+                    Our Values
+                  </Typography>
+                </Grid>
+                <Grid item className={classes.cardContentStyle}>
+                  <Typography
+                    variant="subtitle2"
+                    color="initial"
+                    align="center"
+                  >
+                    Our team’s focus is to be customer centric, unbiased,
+                    transparent, solution oriented, timely and provide prompt
+                    pre and post issuance service.
+                  </Typography>
+                </Grid>
+              </Grid>
+            </Card>
+          </Grid>
+        </Box>
+        <Box
+          component={Grid}
+          item
+          container
+          display={{ xs: "none", md: "flex", lg: "none" }}
+          justify="center"
+          spacing={2}
+        >
+          <Grid item xs={10} md={4} lg={4}>
+            <Card className={classes.cardStyleMedium}>
+              <Grid container direction="column">
+                <Grid item className={classes.cardTitleStyle}>
+                  <Typography
+                    variant="h6"
+                    color="initial"
+                    align="center"
+                    style={{ fontWeight: "600" }}
+                  >
+                    Our Mission
+                  </Typography>
+                </Grid>
+                <Grid item className={classes.cardContentStyle}>
+                  <Typography
+                    variant="subtitle2"
+                    color="initial"
+                    align="center"
+                  >
+                    InsureLeague is a brand committed to making your long term
+                    goals for your family and business “a reality” during your
+                    presence and absence. We strive to provide your family the
+                    safety net of financial security, and provide you the
+                    freedom to follow your dreams.
+                  </Typography>
+                </Grid>
+              </Grid>
+            </Card>
+          </Grid>
+          <Grid item xs={10} md={4} lg={4}>
+            <Card className={classes.cardStyleMedium}>
+              <Grid container direction="column">
+                <Grid item className={classes.cardTitleStyle}>
+                  <Typography
+                    variant="h6"
+                    color="initial"
+                    align="center"
+                    style={{ fontWeight: "600" }}
+                  >
+                    Our Vision
+                  </Typography>
+                </Grid>
+                <Grid item className={classes.cardContentStyle}>
+                  <Typography
+                    variant="subtitle2"
+                    color="initial"
+                    align="center"
+                  >
+                    We empower and educate business organization and
+                    individuals, on the requirement for sufficient insurance
+                    cover to mitigate risk in both business and personal life.
+                  </Typography>
+                </Grid>
+              </Grid>
+            </Card>
+          </Grid>
+          <Grid item xs={10} md={4} lg={4}>
+            <Card className={classes.cardStyleMedium}>
+              <Grid container direction="column">
+                <Grid item className={classes.cardTitleStyle}>
+                  <Typography
+                    variant="h6"
+                    color="initial"
+                    align="center"
+                    style={{ fontWeight: "600" }}
+                  >
+                    Our Values
+                  </Typography>
+                </Grid>
+                <Grid item className={classes.cardContentStyle}>
+                  <Typography
+                    variant="subtitle2"
+                    color="initial"
+                    align="center"
+                  >
+                    Our team’s focus is to be customer centric, unbiased,
+                    transparent, solution oriented, timely and provide prompt
+                    pre and post issuance service.
+                  </Typography>
+                </Grid>
+              </Grid>
+            </Card>
+          </Grid>
+        </Box>
+        <Box
+          component={Grid}
+          item
+          container
+          display={{ xs: "flex", sm: "flex", md: "none" }}
+          justify="center"
+          spacing={2}
+        >
+          <Grid item xs={10} sm={6} md={4} lg={4}>
+            <Card className={classes.cardStyleSmall}>
+              <Grid container direction="column">
+                <Grid item className={classes.cardTitleStyle}>
+                  <Typography
+                    variant="h6"
+                    color="initial"
+                    align="center"
+                    style={{ fontWeight: "600" }}
+                  >
+                    Our Mission
+                  </Typography>
+                </Grid>
+                <Grid item className={classes.cardContentStyle}>
+                  <Typography
+                    variant="subtitle2"
+                    color="initial"
+                    align="center"
+                  >
+                    InsureLeague is a brand committed to making your long term
+                    goals for your family and business “a reality” during your
+                    presence and absence. We strive to provide your family the
+                    safety net of financial security, and provide you the
+                    freedom to follow your dreams.
+                  </Typography>
+                </Grid>
+              </Grid>
+            </Card>
+          </Grid>
+          <Grid item xs={10} sm={6} md={4} lg={4}>
+            <Card className={classes.cardStyleSmall}>
+              <Grid container direction="column">
+                <Grid item className={classes.cardTitleStyle}>
+                  <Typography
+                    variant="h6"
+                    color="initial"
+                    align="center"
+                    style={{ fontWeight: "600" }}
+                  >
+                    Our Vision
+                  </Typography>
+                </Grid>
+                <Grid item className={classes.cardContentStyle}>
+                  <Typography
+                    variant="subtitle2"
+                    color="initial"
+                    align="center"
+                  >
+                    We empower and educate business organization and
+                    individuals, on the requirement for sufficient insurance
+                    cover to mitigate risk in both business and personal life.
+                  </Typography>
+                </Grid>
+              </Grid>
+            </Card>
+          </Grid>
+          <Grid item xs={10} sm={6} md={4} lg={4}>
+            <Card className={classes.cardStyleSmall}>
+              <Grid container direction="column">
+                <Grid item className={classes.cardTitleStyle}>
+                  <Typography
+                    variant="h6"
+                    color="initial"
+                    align="center"
+                    style={{ fontWeight: "600" }}
+                  >
+                    Our Values
+                  </Typography>
+                </Grid>
+                <Grid item className={classes.cardContentStyle}>
+                  <Typography
+                    variant="subtitle2"
+                    color="initial"
+                    align="center"
+                  >
+                    Our team’s focus is to be customer centric, unbiased,
+                    transparent, solution oriented, timely and provide prompt
+                    pre and post issuance service.
+                  </Typography>
+                </Grid>
+              </Grid>
+            </Card>
+          </Grid>
+        </Box>
         <Grid item>
           <Typography
             variant="h4"
@@ -97,91 +391,36 @@ const Intro2 = () => {
           </ul>
         </Grid>
         <Grid item container>
-          <Grid item md={6} sm={12} container>
-            <Grid item>
-              <Typography
-                variant="h4"
-                color="initial"
-                className={classes.headingStyle}
-                style={{ paddingTop: "2rem" }}
-              >
-                Our Mission
-              </Typography>
-            </Grid>
-            <Grid item>
-              <p>
-                InsureLeague is a brand committed to making your long term goals
-                for your family and business “a reality” during your presence
-                and absence. We strive to provide your family the safety net of
-                financial security, and provide you the freedom to follow your
-                dreams.
-              </p>
-            </Grid>
-            <Grid item>
-              <Typography
-                variant="h4"
-                color="initial"
-                className={classes.headingStyle}
-              >
-                Our Vision
-              </Typography>
-            </Grid>
-            <Grid item>
-              <p>
-                We empower and educate business organization and individuals, on
-                the requirement for sufficient insurance cover to mitigate risk
-                in both business and personal life.
-              </p>
-            </Grid>
-            <Grid item>
-              <Typography
-                variant="h4"
-                color="initial"
-                className={classes.headingStyle}
-              >
-                Our Values
-              </Typography>
-            </Grid>
-            <Grid item>
-              <p>
-                Our team’s focus is to be customer centric, unbiased,
-                transparent, solution oriented, timely and provide prompt pre
-                and post issuance service.
-              </p>
-            </Grid>
+          <Grid item>
+            <Typography
+              variant="h4"
+              color="initial"
+              className={classes.headingStyle}
+              style={{ paddingTop: "2rem" }}
+            >
+              What sets us apart
+            </Typography>
           </Grid>
-          <Grid item md={6} sm={12} container>
-            <Grid item>
-              <Typography
-                variant="h4"
-                color="initial"
-                className={classes.headingStyle}
-                style={{ paddingTop: "2rem" }}
-              >
-                What sets us apart
-              </Typography>
-            </Grid>
-            <Grid item>
-              <p>
-                InsureLeague is the brand of Infinite Basket Insurance Marketing
-                Pvt. Ltd., a Bangalore based Insurance Regulatory Development
-                Authority of India (IRDAI) approved venture Securing lives. We
-                leverage the experience of our team members and are backed by a
-                strong team of qualified advisory members. Our key focus is to
-                provide our clients the tools - to mitigate risk, secure their
-                future and plan for their goals - through customized insurance
-                advisory.
-              </p>
-              <p>
-                Over the last few years, we have catered to the requirements of
-                120+ clientele including MSME & NRIs. InsureLeague team provides
-                complete information of the insurance plans, unbiased advice,
-                ethical conduct, support for claim settlement & full disclosure
-                of all information to our customers, to make an informed
-                decision. The transparency with which we advise our clients has
-                helped us build strong trust among our clients.
-              </p>
-            </Grid>
+          <Grid item>
+            <p>
+              InsureLeague is the brand of Infinite Basket Insurance Marketing
+              Pvt. Ltd., a Bangalore based Insurance Regulatory Development
+              Authority of India (IRDAI) approved venture Securing lives. We
+              leverage the experience of our team members and are backed by a
+              strong team of qualified advisory members. Our key focus is to
+              provide our clients the tools - to mitigate risk, secure their
+              future and plan for their goals - through customized insurance
+              advisory.
+            </p>
+            <p>
+              Over the last few years, we have catered to the requirements of
+              120+ clientele including MSME & NRIs. InsureLeague team provides
+              complete information of the insurance plans, unbiased advice,
+              ethical conduct, support for claim settlement & full disclosure of
+              all information to our customers, to make an informed decision.
+              The transparency with which we advise our clients has helped us
+              build strong trust among our clients.
+            </p>
           </Grid>
         </Grid>
       </Grid>
