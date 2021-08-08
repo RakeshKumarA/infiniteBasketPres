@@ -1,7 +1,7 @@
 import { Box, Grid, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import React from "react";
-import image1 from "../../assets/generalInsurance_main.png";
+import image1 from "../../assets/generalInsurance_main.jpg";
 import IntroCard3 from "./IntroCard3";
 
 const useStyles = makeStyles({

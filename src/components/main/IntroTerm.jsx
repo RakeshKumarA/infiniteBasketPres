@@ -1,7 +1,7 @@
 import { Grid, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import React, { useState } from "react";
-import image1 from "../../assets/termPlans_main.png";
+import image1 from "../../assets/termPlans_main.jpg";
 import IntroCard from "./IntroCard";
 
 const useStyles = makeStyles({

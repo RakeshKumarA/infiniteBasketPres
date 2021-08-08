@@ -1,12 +1,12 @@
 import { Box, Grid, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import React from "react";
-import image1 from "../../assets/hniRetirement_main.png";
+import image1 from "../../assets/hniRetirement_main.jpg";
 
 const useStyles = makeStyles({
   mediaStyle: {
     width: "100%",
-    height: "80vh",
+    height: "100vh",
     backgroundImage: `url(${image1})`,
     backgroundPosition: "center",
     backgroundSize: "cover",
@@ -58,22 +58,20 @@ const Introhni = () => {
                 color="initial"
                 style={{ paddingBottom: "2rem" }}
               >
-                Retirement Plans are insurance products which help you
-                accumulate savings over a long period of time, providing
-                financial security for your future. Pension plans help you in
-                building a corpus to ensure a steady income flow after
-                retirement.
+                As much as building wealth is important, retaining the wealth
+                and generating a steady source of income from it is equally
+                important.
               </Typography>
               <Typography
                 variant="subtitle2"
                 color="initial"
                 style={{ paddingBottom: "2rem" }}
               >
-                With the proceeds of the retirement/pension plans, you can also
-                opt for monthly pension benefits by purchasing annuity plans.
-                Further, with dual benefits of protection with investment,
-                pension plans are ideal to help you prepare for your financial
-                needs in the golden years of your life
+                Guaranteed income insurance plans do not depend upon the market
+                and ensures to provide you fixed returns at the frequency and
+                rate that you deem fit. A portion of the wealth generated when
+                invested in these plans, provide the steady income at guaranteed
+                interest rates for a long duration along with risk cover.
               </Typography>
               <a
                 href="https://youtu.be/rhFRgUEt72U"

@@ -5,6 +5,8 @@ import Team from "./Team";
 import CallToAction from "./CallToAction";
 import Showcase from "./Showcase";
 import Footer from "../footer/Footer";
+import { Box, Grid } from "@material-ui/core";
+import ShowcaseRes from "./ShowcaseRes";
 
 const useStyles = makeStyles({
   root: {
@@ -18,10 +20,12 @@ const Main = () => {
   return (
     <div className={classes.root}>
       <div id="section1">
-        <Showcase />
-      </div>
-      <div id="section2">
-        <Intro />
+        <Box component={Grid} display={{ xs: "none", lg: "flex" }}>
+          <Showcase />
+        </Box>
+        <Box component={Grid} display={{ xs: "flex", lg: "none" }}>
+          <ShowcaseRes />
+        </Box>
       </div>
       <div id="section3">
         <Team />

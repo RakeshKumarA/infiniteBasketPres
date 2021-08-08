@@ -31,6 +31,10 @@ const useStyles = makeStyles({
   namefontwt: {
     fontWeight: 600,
   },
+  avatarwidth: {
+    width: "4rem",
+    height: "4rem",
+  },
 });
 
 const Team = () => {
@@ -64,30 +68,25 @@ const Team = () => {
                     color="initial"
                     style={{ fontsize: "1.5rem", fontWeight: "600" }}
                   >
-                    Jaisimha N S
+                    Jaisimha Nuggehally Srinath
                   </Typography>
                 </Grid>
                 <Grid item>
                   <Spacer amount={8} />
                 </Grid>
                 <Grid item>
-                  <Avatar alt="Jai" src={jai} />
+                  <Avatar alt="Jai" src={jai} className={classes.avatarwidth} />
                 </Grid>
               </Grid>
               <Grid item>
                 <Typography variant="h6" color="initial">
-                  Jaisimha is the Co Promoter & Principal Officer of the
-                  company. He started his career as an Executive in Sundaram
-                  Finance Ltd. In 2000 he joined UTI Bank as Deputy Manger.
-                  During his tenure of 18 years in Axis Bank, he held various
-                  leadership positions – Sales Head, Priority and NRI Channel
-                  Head, Bancassurance Channel, Circle Trust Head. His last
-                  assignment was with Lakshmi Vilas Bank as Branch Banking Head
-                  and Regional Head, Karnataka.
-                </Typography>
-                <Typography variant="h6" color="initial">
-                  His expertise includes Business Development, Relationship
-                  Management and Customer Service.
+                  Jaisimha Nuggehally Srinath is the Promoter & Principal
+                  Officer - A post graduate from Symbiosis Pune with 25 years
+                  experience in Banking & Finance. Held Leadership roles in
+                  Development Bank Of Singapore (Lakshmi Vilas Bank), Axis Bank
+                  & Sundaram Finance. An expert in steering business verticals
+                  to new heights, instrumental in setting up new lines of
+                  Business & ensuring it to be profitable.
                 </Typography>
               </Grid>
             </Grid>
@@ -106,7 +105,11 @@ const Team = () => {
                   <Spacer amount={8} />
                 </Grid>
                 <Grid item>
-                  <Avatar alt="Indu" src={indu} />
+                  <Avatar
+                    alt="Indu"
+                    src={indu}
+                    className={classes.avatarwidth}
+                  />
                 </Grid>
               </Grid>
               <Grid item>
@@ -135,7 +138,11 @@ const Team = () => {
                   <Spacer amount={8} />
                 </Grid>
                 <Grid item>
-                  <Avatar alt="Arun" src={arun} />
+                  <Avatar
+                    alt="Arun"
+                    src={arun}
+                    className={classes.avatarwidth}
+                  />
                 </Grid>
               </Grid>
               <Grid item>
@@ -182,14 +189,14 @@ const Team = () => {
                     color="initial"
                     className={classes.namefontwt}
                   >
-                    Jaisimha NS
+                    Jaisimha Nuggehally Srinath
                   </Typography>
                 </Grid>
                 <Grid item>
                   <Spacer amount={4} />
                 </Grid>
                 <Grid item>
-                  <Avatar alt="Jai" src={jai} />
+                  <Avatar alt="Jai" src={jai} className={classes.avatarwidth} />
                 </Grid>
               </Grid>
               <Grid item>
@@ -198,22 +205,13 @@ const Team = () => {
                   color="initial"
                   className={classes.resumefontwt}
                 >
-                  Jaisimha is the Co Promoter & Principal Officer of the
-                  company. He started his career as an Executive in Sundaram
-                  Finance Ltd. In 2000 he joined UTI Bank as Deputy Manger.
-                  During his tenure of 18 years in Axis Bank, he held various
-                  leadership positions – Sales Head, Priority and NRI Channel
-                  Head, Bancassurance Channel, Circle Trust Head. His last
-                  assignment was with Lakshmi Vilas Bank as Branch Banking Head
-                  and Regional Head, Karnataka.
-                </Typography>
-                <Typography
-                  variant="subtitle2"
-                  color="initial"
-                  className={classes.resumefontwt}
-                >
-                  His expertise includes Business Development, Relationship
-                  Management and Customer Service.
+                  Jaisimha Nuggehally Srinath is the Promoter & Principal
+                  Officer - A post graduate from Symbiosis Pune with 25 years
+                  experience in Banking & Finance. Held Leadership roles in
+                  Development Bank Of Singapore (Lakshmi Vilas Bank), Axis Bank
+                  & Sundaram Finance. An expert in steering business verticals
+                  to new heights, instrumental in setting up new lines of
+                  Business & ensuring it to be profitable.
                 </Typography>
               </Grid>
             </Grid>
@@ -232,7 +230,11 @@ const Team = () => {
                   <Spacer amount={4} />
                 </Grid>
                 <Grid item>
-                  <Avatar alt="Indu" src={indu} />
+                  <Avatar
+                    alt="Indu"
+                    src={indu}
+                    className={classes.avatarwidth}
+                  />
                 </Grid>
               </Grid>
               <Grid item>
@@ -265,7 +267,11 @@ const Team = () => {
                   <Spacer amount={4} />
                 </Grid>
                 <Grid item>
-                  <Avatar alt="Arun" src={arun} />
+                  <Avatar
+                    alt="Arun"
+                    src={arun}
+                    className={classes.avatarwidth}
+                  />
                 </Grid>
               </Grid>
               <Grid item>
@@ -330,7 +336,7 @@ const Team = () => {
                   <Spacer amount={4} />
                 </Grid>
                 <Grid item>
-                  <Avatar alt="Jai" src={jai} />
+                  <Avatar alt="Jai" src={jai} className={classes.avatarwidth} />
                 </Grid>
               </Grid>
               <Grid item>
@@ -339,22 +345,13 @@ const Team = () => {
                   color="initial"
                   className={classes.resumefontwt}
                 >
-                  Jaisimha is the Co Promoter & Principal Officer of the
-                  company. He started his career as an Executive in Sundaram
-                  Finance Ltd. In 2000 he joined UTI Bank as Deputy Manger.
-                  During his tenure of 18 years in Axis Bank, he held various
-                  leadership positions – Sales Head, Priority and NRI Channel
-                  Head, Bancassurance Channel, Circle Trust Head. His last
-                  assignment was with Lakshmi Vilas Bank as Branch Banking Head
-                  and Regional Head, Karnataka.
-                </Typography>
-                <Typography
-                  variant="subtitle2"
-                  color="initial"
-                  className={classes.resumefontwt}
-                >
-                  His expertise includes Business Development, Relationship
-                  Management and Customer Service.
+                  Jaisimha Nuggehally Srinath is the Promoter & Principal
+                  Officer - A post graduate from Symbiosis Pune with 25 years
+                  experience in Banking & Finance. Held Leadership roles in
+                  Development Bank Of Singapore (Lakshmi Vilas Bank), Axis Bank
+                  & Sundaram Finance. An expert in steering business verticals
+                  to new heights, instrumental in setting up new lines of
+                  Business & ensuring it to be profitable.
                 </Typography>
               </Grid>
             </Grid>
@@ -373,7 +370,11 @@ const Team = () => {
                   <Spacer amount={4} />
                 </Grid>
                 <Grid item>
-                  <Avatar alt="Indu" src={indu} />
+                  <Avatar
+                    alt="Indu"
+                    src={indu}
+                    className={classes.avatarwidth}
+                  />
                 </Grid>
               </Grid>
               <Grid item>
@@ -406,7 +407,11 @@ const Team = () => {
                   <Spacer amount={4} />
                 </Grid>
                 <Grid item>
-                  <Avatar alt="Arun" src={arun} />
+                  <Avatar
+                    alt="Arun"
+                    src={arun}
+                    className={classes.avatarwidth}
+                  />
                 </Grid>
               </Grid>
               <Grid item>

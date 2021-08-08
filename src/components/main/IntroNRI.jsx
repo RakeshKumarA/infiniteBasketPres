@@ -1,7 +1,7 @@
 import { Box, Grid, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import React from "react";
-import image1 from "../../assets/nriInvestment_main.png";
+import image1 from "../../assets/nriInvestment_main.jpg";
 import NRITable from "./NRITable";
 
 const useStyles = makeStyles({

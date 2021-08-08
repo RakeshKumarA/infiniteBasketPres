@@ -2,12 +2,14 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Swiper from "react-id-swiper";
 import "swiper/swiper-bundle.css";
-import image1 from "../../assets/keymanInsurance_home.png";
-import image2 from "../../assets/termPlans_home.png";
-import image3 from "../../assets/nriInvestment_home_final.png";
-import image4 from "../../assets/generalInsurance.jpg";
-import image5 from "../../assets/hniRetirement.jpg";
-import image6 from "../../assets/healthInsurance.jpg";
+import image1 from "../../assets/keymanInsurance_final.jpg";
+import image2 from "../../assets/termPlans_final.jpg";
+import image3 from "../../assets/nriInvestment_final.jpg";
+import image4 from "../../assets/generalInsurance_final-min.jpg";
+import image5 from "../../assets/hniRetirement_final.jpg";
+import image6 from "../../assets/healthInsurance_final.jpg";
+import image7 from "../../assets/landing_final.jpg";
+
 import SwiperCore, {
   Navigation,
   Pagination,
@@ -18,6 +20,8 @@ import SwiperCore, {
 } from "swiper";
 import Button from "@material-ui/core/Button";
 import { useHistory } from "react-router";
+import Grid from "@material-ui/core/Grid";
+import { Typography } from "@material-ui/core";
 SwiperCore.use([
   Navigation,
   Pagination,
@@ -35,10 +39,10 @@ const useStyles = makeStyles({
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     display: "flex",
-    justifyContent: "center",
     alignItems: "flex-end",
   },
   buttonStyle: {
+    paddingLeft: "15rem",
     paddingBottom: "5rem",
   },
 });
@@ -62,6 +66,9 @@ const Showcase = () => {
     },
   };
 
+  const aboutHandler = () => {
+    history.push("/about");
+  };
   const keymanHandler = () => {
     history.push("/keyman");
   };
@@ -85,11 +92,21 @@ const Showcase = () => {
     <Swiper {...params}>
       <div
         className={classes.mediaStyle}
+        style={{ backgroundImage: `url(${image7})` }}
+      >
+        <div className={classes.buttonStyle} style={{ paddingLeft: "46vw" }}>
+          <Button variant="contained" color="default" onClick={aboutHandler}>
+            Know More
+          </Button>
+        </div>
+      </div>
+      <div
+        className={classes.mediaStyle}
         style={{ backgroundImage: `url(${image3})` }}
       >
         <div className={classes.buttonStyle}>
           <Button variant="contained" color="default" onClick={nriHandler}>
-            NRI Insurance
+            Know More
           </Button>
         </div>
       </div>
@@ -99,7 +116,7 @@ const Showcase = () => {
       >
         <div className={classes.buttonStyle}>
           <Button variant="contained" color="default" onClick={hniHandler}>
-            HNI Retirement
+            Know More
           </Button>
         </div>
       </div>
@@ -109,7 +126,7 @@ const Showcase = () => {
       >
         <div className={classes.buttonStyle}>
           <Button variant="contained" color="default" onClick={keymanHandler}>
-            Keyman Insurance
+            Know More
           </Button>
         </div>
       </div>
@@ -119,7 +136,7 @@ const Showcase = () => {
       >
         <div className={classes.buttonStyle}>
           <Button variant="contained" color="default" onClick={giHandler}>
-            General Insurance
+            Know More
           </Button>
         </div>
       </div>
@@ -129,7 +146,7 @@ const Showcase = () => {
       >
         <div className={classes.buttonStyle}>
           <Button variant="contained" color="default" onClick={termHandler}>
-            Term Plans
+            Know More
           </Button>
         </div>
       </div>
@@ -139,7 +156,7 @@ const Showcase = () => {
       >
         <div className={classes.buttonStyle}>
           <Button variant="contained" color="default" onClick={healthHandler}>
-            Health Insurance
+            Know More
           </Button>
         </div>
       </div>

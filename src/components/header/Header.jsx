@@ -21,7 +21,8 @@ import ListItemIcon from "@material-ui/core/ListItemIcon";
 
 const useStyles = makeStyles({
   root: {
-    height: "6.25rem",
+    paddingTop: "1rem",
+    height: "5.25rem",
     transition: "all 0.5s ease-in-out",
   },
   triggeredroot: {
@@ -172,22 +173,6 @@ const Header = (props) => {
                 <Box component={Grid} item>
                   <Link
                     activeClass="active"
-                    to="section2"
-                    spy={true}
-                    smooth={true}
-                    offset={-70}
-                    duration={500}
-                  >
-                    <Button variant="text" color="default">
-                      <Typography variant="subtitle2" color="initial">
-                        Company
-                      </Typography>
-                    </Button>
-                  </Link>
-                </Box>
-                <Box component={Grid} item>
-                  <Link
-                    activeClass="active"
                     to="section3"
                     spy={true}
                     smooth={true}
@@ -224,7 +209,7 @@ const Header = (props) => {
                     className={classes.buttonTextStyle}
                     onClick={blogClickHandler}
                   >
-                    Blog
+                    Newsroom
                   </Typography>
                 </Button>
               </Box>
@@ -315,22 +300,6 @@ const Header = (props) => {
                       </Link>
                       <Link
                         activeClass="active"
-                        to="section2"
-                        spy={true}
-                        smooth={true}
-                        offset={-70}
-                        duration={500}
-                      >
-                        <ListItem button>
-                          <ListItemText>
-                            <Typography variant="h6" color="initial">
-                              Company
-                            </Typography>
-                          </ListItemText>
-                        </ListItem>
-                      </Link>
-                      <Link
-                        activeClass="active"
                         to="section3"
                         spy={true}
                         smooth={true}
@@ -364,7 +333,7 @@ const Header = (props) => {
                       <ListItem button onClick={blogClickHandler}>
                         <ListItemText>
                           <Typography variant="h6" color="initial">
-                            Blog
+                            Newsroom
                           </Typography>
                         </ListItemText>
                       </ListItem>
