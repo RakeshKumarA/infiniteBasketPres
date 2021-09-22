@@ -22,6 +22,9 @@ const useStyles = makeStyles({
     width: '100%',
     maxWidth: 550,
   },
+  paddingbottom1rem: {
+    paddingBottom: '1rem',
+  },
 });
 
 const Contact = () => {
@@ -33,21 +36,13 @@ const Contact = () => {
       justify="center"
       alignItems="center"
     >
-      <Grid
-        item
-        container
-        md={5}
-        sm={10}
-        alignItems="center"
-        justify="center"
-        spacing={2}
-      >
-        <Grid item>
+      <Grid item container md={5} sm={10} alignItems="center" justify="center">
+        <Grid item className={classes.paddingbottom1rem} xs={10}>
           <Typography variant="h3" color="initial" align="center">
             Send Us an Email
           </Typography>
         </Grid>
-        <Grid item>
+        <Grid item className={classes.paddingbottom1rem} xs={10}>
           <Typography variant="body2" color="initial" align="center">
             Send us all your requests or questions by submitting the below form.
           </Typography>
@@ -59,57 +54,70 @@ const Contact = () => {
           className={classes.cardContainerStyle}
         >
           <Card className={classes.cardStyle} elevation={4}>
-            <Grid container direction="column" spacing={3}>
-              <Grid item>
-                <TextField
-                  label="Name"
-                  variant="outlined"
-                  fullWidth
-                  size="small"
-                />
-              </Grid>
-              <Grid item container spacing={2}>
-                <Grid item sm={6}>
+            <form name="contact" method="POST" data-netlify="true">
+              <input type="hidden" name="form-name" value="contact" />
+              <Grid container direction="column" spacing={3}>
+                <Grid item>
                   <TextField
-                    label="Contact Number"
+                    label="Name"
                     variant="outlined"
+                    fullWidth
+                    size="small"
+                    name="name"
+                  />
+                </Grid>
+                <Grid item container spacing={2}>
+                  <Grid item sm={6} xs={12}>
+                    <TextField
+                      label="Contact Number"
+                      name="contactNumber"
+                      variant="outlined"
+                      fullWidth
+                      size="small"
+                    />
+                  </Grid>
+                  <Grid item sm={6} xs={12}>
+                    <TextField
+                      label="Email"
+                      variant="outlined"
+                      fullWidth
+                      size="small"
+                      name="email"
+                    />
+                  </Grid>
+                </Grid>
+                <Grid item>
+                  <TextField
+                    label="Subject"
+                    variant="outlined"
+                    fullWidth
+                    name="subject"
+                    size="small"
+                  />
+                </Grid>
+                <Grid item>
+                  <TextField
+                    label="Description"
+                    variant="outlined"
+                    multiline
+                    name="message"
+                    rows={8}
                     fullWidth
                     size="small"
                   />
                 </Grid>
-                <Grid item sm={6}>
-                  <TextField
-                    label="Email"
-                    variant="outlined"
+                <Grid item>
+                  <Button
+                    variant="contained"
+                    color="primary"
                     fullWidth
-                    size="small"
-                  />
+                    type="submit"
+                  >
+                    Submit
+                  </Button>
                 </Grid>
               </Grid>
-              <Grid item>
-                <TextField
-                  label="Subject"
-                  variant="outlined"
-                  fullWidth
-                  size="small"
-                />
-              </Grid>
-              <Grid item>
-                <TextField
-                  label="Description"
-                  variant="outlined"
-                  multiline
-                  rows={8}
-                  fullWidth
-                  size="small"
-                />
-              </Grid>
-              <Grid item>
-                <Button variant="contained" color="primary" fullWidth>
-                  Submit
-                </Button>
-              </Grid>
-            </Grid>
+            </form>
           </Card>
         </Grid>
       </Grid>

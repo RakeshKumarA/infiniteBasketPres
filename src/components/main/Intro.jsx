@@ -1,31 +1,31 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
-import Grid from '@material-ui/core/Grid';
-import Button from '@material-ui/core/Button';
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import Typography from "@material-ui/core/Typography";
+import Grid from "@material-ui/core/Grid";
+import Button from "@material-ui/core/Button";
+import { useHistory } from "react-router-dom";
 
 const useStyles = makeStyles({
   root: {
-    height: 600,
-    backgroundImage: 'linear-gradient(45deg, #4CAF50,#81C784 100%)',
-    color: '#fff',
-  },
-  child: {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
+    height: 500,
+    backgroundImage: "linear-gradient(45deg, #FAFAFA,#F5F5F5 100%)",
+    padding: "2rem",
   },
   buttonTextStyle: {
-    padding: '0 .5rem',
+    padding: "0 .5rem",
   },
   marginTop2rem: {
-    marginTop: '2rem',
+    marginTop: "2rem",
   },
 });
 
 const Intro = () => {
   const classes = useStyles();
+  const history = useHistory();
+
+  const handleAboutClick = () => {
+    history.push("/about");
+  };
   return (
     <Grid container className={classes.root} justify="center">
       <Grid
@@ -49,11 +49,11 @@ const Intro = () => {
         </Grid>
         <Grid item className={classes.marginTop2rem}>
           <Typography variant="body2" color="initial" align="center">
-            InsureLeague is a Corporate Insurance Advisory / Marketing firm with
-            approval from IRDAI. With over 30 years of industry experience, we
-            focus on giving tailor made insurance / investment/ risk mitigation
-            solutions for MSME (Micro, Small & Medium Enterprises), HNI (High
-            Networth Individuals) and NRI (Non - Resident Individuals) clients.
+            InsureLeague is a Insurance Marketing firm with approval from IRDAI.
+            With over 30 years of industry experience, we focus on giving tailor
+            made insurance / investment/ risk mitigation solutions for MSME
+            (Micro, Small & Medium Enterprises), HNI (High Networth Individuals)
+            and NRI (Non - Resident Individuals) clients.
           </Typography>
         </Grid>
         <Grid item className={classes.marginTop2rem}>
@@ -62,6 +62,7 @@ const Intro = () => {
               variant="subtitle2"
               color="initial"
               className={classes.buttonTextStyle}
+              onClick={handleAboutClick}
             >
               LEARN MORE
             </Typography>
