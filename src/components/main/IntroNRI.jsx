@@ -65,7 +65,7 @@ const IntroNRI = () => {
             </Grid>
             <Grid item>
               <a
-                href="https://youtu.be/ELixoFd9-2c"
+                href="https://www.youtube.com/watch?v=YCHhNvCg8Lc"
                 target="blank"
                 rel="noopener noreferrer"
                 className={classes.externalLink}
